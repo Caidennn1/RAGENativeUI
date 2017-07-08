@@ -31,6 +31,7 @@
                 menu.Draw(g);
             };
 
+            MenuSkin redSkin = new MenuSkin(@"RAGENativeUI Resources\menu-red-skin.png");
             GameFiber.StartNew(() =>
             {
                 while (true)
@@ -38,6 +39,14 @@
                     GameFiber.Yield();
 
                     menu.ProcessInput();
+
+                    if(Game.IsKeyDown(System.Windows.Forms.Keys.Y))
+                    {
+                        if (menu.Skin == MenuSkin.DefaultSkin)
+                            menu.Skin = redSkin;
+                        else
+                            menu.Skin = MenuSkin.DefaultSkin;
+                    }
                 }
             });
         }
