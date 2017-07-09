@@ -23,6 +23,12 @@
         {
         }
 
+        public override bool OnPreviewAccept(Menu menuSender)
+        {
+            State = (State == MenuItemCheckboxState.Empty) ? MenuItemCheckboxState.Tick : MenuItemCheckboxState.Empty;
+            return true;
+        }
+
         public override void Draw(Graphics graphics, MenuSkin skin, bool selected, ref float x, ref float y)
         {
             if (selected)
