@@ -100,7 +100,7 @@
                 }
             }
 
-            if (Controls.Accept.IsHeld())
+            if (Controls.Accept.IsJustPressed())
             {
                 if (SelectedItem == null || SelectedItem.OnPreviewAccept(this))
                 {
@@ -108,7 +108,7 @@
                 }
             }
 
-            if (Controls.Cancel.IsHeld())
+            if (Controls.Cancel.IsJustPressed())
             {
                 if (SelectedItem == null || SelectedItem.OnPreviewCancel(this))
                 {
