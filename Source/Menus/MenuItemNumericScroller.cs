@@ -119,7 +119,7 @@
 
         protected override int GetOptionsCount()
         {
-            return (int)((Maximum - Minimum) / Increment);
+            return (int)((Maximum - Minimum) / Increment) + 1;
         }
 
         protected override string GetSelectedOptionText()
