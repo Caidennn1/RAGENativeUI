@@ -44,7 +44,7 @@
             return true;
         }
 
-        public override void Draw(Graphics graphics, MenuSkin skin, bool selected, ref float x, ref float y)
+        public override void Draw(Graphics graphics, Menu sender, MenuSkin skin, bool selected, ref float x, ref float y)
         {
             if (selected)
             {
