@@ -1,5 +1,6 @@
 ﻿namespace RAGENativeUI.Utility
 {
+    using System;
     using System.Drawing;
 
     using Rage;
@@ -14,7 +15,7 @@
         {
             get
             {
-                if (height == -1.0f && Name != null)
+                if (height == -1.0f)
                     height = Common.GetFontHeight(Name, Size);
                 return height;
             }
@@ -22,7 +23,7 @@
 
         public Font(string name, float size)
         {
-            Name = name;
+            Name = name ?? throw new ArgumentNullException(nameof(name));
             Size = size;
             height = -1.0f;
         }
