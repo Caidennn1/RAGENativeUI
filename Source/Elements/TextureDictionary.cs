@@ -29,7 +29,7 @@
 
             int endTime = System.Environment.TickCount + 5000;
             while (!IsLoaded && endTime > System.Environment.TickCount)
-                GameFiber.Sleep(10);
+                GameFiber.Yield();
         }
 
         public static implicit operator TextureDictionary(string name) => new TextureDictionary(name);
