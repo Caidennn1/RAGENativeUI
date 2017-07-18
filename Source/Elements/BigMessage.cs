@@ -94,8 +94,6 @@
             {
                 uint gameTime = Game.GameTime;
 
-                Game.DisplayHelp($"{gameTime}~n~{endTime}");
-
                 if (gameTime > endTime + outTransitionTimeInMilliseconds)
                 {
                     endTime = 0;
