@@ -11,7 +11,7 @@
     using RAGENativeUI.Utility;
     using Font = RAGENativeUI.Utility.Font;
 
-    public class MenuSkin : ISkin
+    public class MenuSkin : IMenuSkin
     {
         public Texture Image { get; }
 
