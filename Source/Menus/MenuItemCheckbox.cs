@@ -21,6 +21,7 @@
 
         protected internal override bool OnPreviewAccept(Menu menuSender)
         {
+            base.OnPreviewAccept(menuSender);
             State = (State == MenuItemCheckboxState.Empty) ? MenuItemCheckboxState.Tick : MenuItemCheckboxState.Empty;
             return true;
         }
