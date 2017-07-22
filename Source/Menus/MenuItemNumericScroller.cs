@@ -86,8 +86,9 @@
             get { return base.SelectedIndex; }
             set
             {
-                base.SelectedIndex = value;
-                currentValue = Minimum + SelectedIndex * Increment;
+                int newIndex = MathHelper.Clamp(value, 0, MathHelper.Max(0, GetOptionsCount() - 1));
+                currentValue = Minimum + newIndex * Increment;
+                base.SelectedIndex = newIndex;
             }
         }
 
