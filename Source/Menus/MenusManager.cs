@@ -30,7 +30,7 @@
 
             foreach (Menu m in menus)
             {
-                m.IsVisible = false;
+                m.Hide(false);
             }
         }
 
@@ -41,7 +41,7 @@
 
             foreach (Menu m in menus)
             {
-                m.IsVisible = true;
+                m.Show();
             }
         }
 
