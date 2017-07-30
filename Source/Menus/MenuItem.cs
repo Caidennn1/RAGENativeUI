@@ -61,10 +61,7 @@
             if (PreviewAccept == null || PreviewAccept.Invoke(this, origin))
             {
                 OnActivated(origin);
-                if (BindedMenu != null)
-                {
-                    BindedMenu.Show(origin);
-                }
+                BindedMenu?.Show(origin);
                 return true;
             }
 
