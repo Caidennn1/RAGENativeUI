@@ -222,12 +222,4 @@
             return -1;
         }
     }
-
-    public static class DisplayItemsCollectionExtensions
-    {
-        public static DisplayItemsCollection ToCollection(this IEnumerable<IDisplayItem> enumerable)
-        {
-            return new DisplayItemsCollection(enumerable);
-        }
-     }
 }
