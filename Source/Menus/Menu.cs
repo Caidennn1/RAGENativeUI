@@ -145,6 +145,7 @@
         /// The owner <see cref="Menu"/> or <c>null</c> if it doesn't have an owner or is hidden.
         /// </value>
         public Menu Owner { get; private set; }
+        public dynamic Metadata { get; } = new Metadata();
 
         public Menu(string title, string subtitle)
         {

@@ -4,6 +4,8 @@
     
     using Graphics = Rage.Graphics;
 
+    using RAGENativeUI.Utility;
+
     public class MenuItem
     {
         public delegate void ActivatedEventHandler(MenuItem sender, Menu origin);
@@ -30,6 +32,7 @@
         /// The binded <see cref="Menu"/> or <c>null</c> if no menu is binded.
         /// </value>
         public Menu BindedMenu { get; set; }
+        public dynamic Metadata { get; } = new Metadata();
 
         public MenuItem(string text)
         {
