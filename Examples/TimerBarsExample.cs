@@ -10,7 +10,6 @@
 
     using RAGENativeUI;
     using RAGENativeUI.Elements;
-    using RAGENativeUI.Utility;
 
     internal static class TimerBarsExample
     {
