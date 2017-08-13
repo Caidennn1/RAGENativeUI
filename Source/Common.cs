@@ -76,5 +76,7 @@
         }
 
         public static void Log(object o) => Game.LogTrivial($"[RAGENativeUI] {o}");
+        [System.Diagnostics.Conditional("DEBUG")]
+        public static void LogDebug(object o) => Game.LogTrivialDebug($"[RAGENativeUI] {o}");
     }
 }
