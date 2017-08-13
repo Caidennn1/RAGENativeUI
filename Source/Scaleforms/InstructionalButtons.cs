@@ -46,7 +46,7 @@
             base.Draw(color);
         }
 
-        public override void Draw(GameScreenRectangle rectangle, Color color)
+        public override void Draw(ScreenRectangle rectangle, Color color)
         {
             Update();
             base.Draw(rectangle, color);
