@@ -20,7 +20,7 @@
         {
             get
             {
-                if(knownNames.TryGetValue(hash, out string n))
+                if (knownNames.TryGetValue(hash, out string n))
                 {
                     return n;
                 }
@@ -118,9 +118,30 @@
 
             return effects;
         }
+        
+        public static ScreenEffect LastActive
+        {
+            get
+            {
+                CScreenEffect* e = GameMemory.ScreenEffectsManager->GetLastActiveEffect();
+                if(e != null)
+                {
+                    return GetByHash(e->NameHash);
+                }
 
+                return null;
+            }
+        }
 
+        public static ScreenEffect CurrentActive
+        {
+            get
+            {
+                ScreenEffect e = LastActive;
 
+                return (e == null || !e.IsActive) ? null : e;
+            }
+        }
 
         private static Dictionary<uint, ScreenEffect> cache = new Dictionary<uint, ScreenEffect>();
 
