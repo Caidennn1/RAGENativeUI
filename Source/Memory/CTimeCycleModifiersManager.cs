@@ -45,8 +45,8 @@
             modifier->Flags = flags;
             modifier->unk24 = -1;
 
-            *GetModifiersArrayEntry() = modifier;
-            CTimeCycleModifier.CSortedArray.Entry* entry = GetSortedModifiersArrayEntry();
+            *GetModifiersArrayUnusedEntry() = modifier;
+            CTimeCycleModifier.CSortedArray.Entry* entry = GetSortedModifiersArrayUnusedEntry();
             entry->Name = name;
             entry->Modifier = modifier;
 
@@ -86,7 +86,7 @@
         }
 
 
-        private CTimeCycleModifier** GetModifiersArrayEntry(short increaseCountIfFull = 5)
+        private CTimeCycleModifier** GetModifiersArrayUnusedEntry(short increaseCountIfFull = 5)
         {
             if (Modifiers.Count == Modifiers.Size)
             {
@@ -106,7 +106,7 @@
             return &Modifiers.Offset[last];
         }
 
-        private CTimeCycleModifier.CSortedArray.Entry* GetSortedModifiersArrayEntry(short increaseCountIfFull = 5)
+        private CTimeCycleModifier.CSortedArray.Entry* GetSortedModifiersArrayUnusedEntry(short increaseCountIfFull = 5)
         {
             if (SortedModifiers.Count == SortedModifiers.Size)
             {
