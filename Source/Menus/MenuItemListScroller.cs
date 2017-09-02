@@ -36,12 +36,12 @@
         {
         }
 
-        protected override int GetOptionsCount()
+        protected internal override int GetOptionsCount()
         {
             return Items.Count;
         }
 
-        protected override string GetSelectedOptionText()
+        protected internal override string GetSelectedOptionText()
         {
             int index = SelectedIndex;
             if (index >= 0 && index < Items.Count)
