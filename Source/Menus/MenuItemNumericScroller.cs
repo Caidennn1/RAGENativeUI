@@ -118,12 +118,12 @@
             SelectedIndex = (int)((currentValue - Minimum) / Increment);
         }
 
-        protected internal override int GetOptionsCount()
+        public override int GetOptionsCount()
         {
             return (int)((Maximum - Minimum) / Increment) + 1;
         }
 
-        protected internal override string GetSelectedOptionText()
+        public override string GetSelectedOptionText()
         {
             string text;
 
