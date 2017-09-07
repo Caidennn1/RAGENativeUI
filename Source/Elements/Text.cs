@@ -8,7 +8,7 @@
 
     public class Text
     {
-        public bool IsVisible { get; set; }
+        public bool IsVisible { get; set; } = true;
         public float Scale { get; set; }
         private List<string> captionSplitted = new List<string>();
         private string caption;
