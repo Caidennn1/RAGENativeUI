@@ -184,8 +184,8 @@
             return mods;
         }
 
-        /// <include file='..\Documentation\RAGENativeUI.TimeCycleModifier.xml' path='D/TimeCycleModifier/Member[@name="Count"]/*' />
-        public static int Count
+        /// <include file='..\Documentation\RAGENativeUI.TimeCycleModifier.xml' path='D/TimeCycleModifier/Member[@name="NumberOfTimeCycleModifiers"]/*' />
+        public static int NumberOfTimeCycleModifiers
         {
             get
             {
