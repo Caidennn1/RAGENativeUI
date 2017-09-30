@@ -3,10 +3,7 @@
     using System.Drawing;
 
     using Graphics = Rage.Graphics;
-
-    using RAGENativeUI.Rendering;
-    using Font = RAGENativeUI.Rendering.Font;
-
+    
     public interface IMenuStyle
     {
         PointF InitialMenuLocation { get; set; }
