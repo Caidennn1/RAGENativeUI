@@ -8,6 +8,10 @@
     public class MenuItemNumericScroller : MenuItemScroller
     {
         private decimal currentValue;
+        private decimal minimum = 0.0m;
+        private decimal maximum = 100.0m;
+        private decimal increment = 0.5m;
+
         public decimal Value
         {
             get { return currentValue; }
@@ -28,7 +32,6 @@
         }
 
 
-        private decimal minimum = 0.0m;
         public decimal Minimum
         {
             get { return minimum; }
@@ -46,7 +49,6 @@
             }
         }
 
-        private decimal maximum = 100.0m;
         public decimal Maximum
         {
             get { return maximum; }
@@ -64,7 +66,6 @@
             }
         }
 
-        private decimal increment = 0.5m;
         public decimal Increment
         {
             get { return increment; }

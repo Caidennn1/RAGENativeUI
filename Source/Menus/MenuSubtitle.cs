@@ -27,7 +27,7 @@
 
         protected internal virtual string GetItemsCounterText()
         {
-            if (counterTotalCount == 0 && counterOnScreenSelectedIndex == 0)
+            if ((counterTotalCount == 0 && counterOnScreenSelectedIndex == 0) || counterTotalCount != Menu.Items.Count)
                 UpdateCounter();
             return $"{counterOnScreenSelectedIndex}/{counterTotalCount} ";
         }
