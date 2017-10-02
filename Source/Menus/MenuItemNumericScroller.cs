@@ -140,7 +140,7 @@
             return text;
         }
 
-        protected internal override bool OnMoveLeft(Menu origin)
+        protected internal override bool OnMoveLeft()
         {
             decimal newValue = currentValue;
 
@@ -167,10 +167,10 @@
 #endif
             Value = newValue;
 
-            return base.OnMoveLeft(origin);
+            return base.OnMoveLeft();
         }
 
-        protected internal override bool OnMoveRight(Menu origin)
+        protected internal override bool OnMoveRight()
         {
             decimal newValue = currentValue;
 
@@ -197,7 +197,7 @@
 #endif
             Value = newValue;
 
-            return base.OnMoveRight(origin);
+            return base.OnMoveRight();
         }
     }
 }
