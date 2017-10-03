@@ -8,6 +8,8 @@
 
     using Rage;
     using Rage.Native;
+    
+    public delegate void TypedEventHandler<TSender, TArgs>(TSender sender, TArgs e) where TArgs : EventArgs;
 
     internal static class Common
     {

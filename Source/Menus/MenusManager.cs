@@ -32,9 +32,9 @@
             menus.Remove(menu);
         }
 
-        private static void OnMenuVisibleChanged(Menu menu, bool visible)
+        private static void OnMenuVisibleChanged(Menu menu, VisibleChangedEventArgs e)
         {
-            if (visible)
+            if (e.IsVisible)
             {
                 visibleMenus.Add(menu);
             }

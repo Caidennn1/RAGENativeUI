@@ -10,8 +10,6 @@
 
     public class MissionPassedScreen : IDisposable
     {
-        public delegate void ContinuedEventHandler(MissionPassedScreen sender);
-
         private const int MaxItemsOnScreenCount = 14;
 
         public BigMessage BigMessage { get; private set; }
@@ -55,7 +53,7 @@
         public PostFxAnimation ShownEffect { get; set; } = PostFxAnimation.GetByName("SuccessNeutral");
         public FrontendSound ButtonPressedSound { get; set; } = new FrontendSound("HUD_FRONTEND_DEFAULT_SOUNDSET", "CONTINUE");
 
-        public event ContinuedEventHandler Continued;
+        public event TypedEventHandler<MissionPassedScreen, EventArgs> Continued;
 
         public MissionPassedScreen(string title, string subtitle)
         {
@@ -260,7 +258,7 @@
 
         private void OnContinued()
         {
-            Continued?.Invoke(this);
+            Continued?.Invoke(this, EventArgs.Empty);
         }
 
         private int GetBigMessageNumStats()
