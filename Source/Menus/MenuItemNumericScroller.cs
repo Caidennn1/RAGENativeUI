@@ -31,7 +31,6 @@
             }
         }
 
-
         public decimal Minimum
         {
             get { return minimum; }
