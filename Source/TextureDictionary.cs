@@ -20,7 +20,9 @@
 
         public TextureDictionary(string name)
         {
-            Name = name ?? throw new ArgumentNullException($"{nameof(Name)} can't be null.");
+            Throw.IfNull(name, nameof(name));
+
+            Name = name;
         }
 
         public void Dismiss()

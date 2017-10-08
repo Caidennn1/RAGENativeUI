@@ -9,6 +9,8 @@
 
         public bool ContainsKey(string key)
         {
+            Throw.IfNull(key, nameof(key));
+
             return dictionary != null && dictionary.ContainsKey(key);
         }
 
