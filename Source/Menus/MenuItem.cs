@@ -50,6 +50,8 @@
                 OnSelectedChanged(new SelectedChangedEventArgs(selected));
             }
         }
+        public bool IsDisabled { get; set; }
+        public bool IsSkippedIfDisabled { get; set; }
 
         public MenuItem(string text)
         {
