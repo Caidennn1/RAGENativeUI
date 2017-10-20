@@ -9,7 +9,6 @@
     using RAGENativeUI;
     using RAGENativeUI.Elements;
     using RAGENativeUI.ImGui;
-    using RAGENativeUI.Rendering;
 
     internal static class TimeCycleModifierExample
     {
