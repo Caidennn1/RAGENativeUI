@@ -1,6 +1,7 @@
 ﻿namespace RAGENativeUI.Menus.Styles
 {
     using System.Drawing;
+    using System.Collections.Generic;
 
     using Graphics = Rage.Graphics;
     
@@ -23,5 +24,7 @@
         void DrawItem(Graphics graphics, MenuItem item, ref float x, ref float y);
 
         string FormatDescriptionText(MenuDescription description, string text, out SizeF textMeasurement);
+
+        IEnumerable<IMenuComponent> EnumerateComponentsInDrawOrder(Menu menu);
     }
 }
