@@ -38,7 +38,7 @@
                 }
 
                 ref pgDictionary<grcTexture> dict = ref GameMemory.TxdStore.Pool.Get(unchecked((uint)dictIndex)).TexturesDictionary;
-                int index = dict.GetValueIndex(nameHash);
+                int index = dict.FindIndex(nameHash);
 
                 if(index == -1)
                 {
