@@ -39,7 +39,7 @@
             uint poolIndex = GetDictionaryPoolIndexByHash(hash);
             if (poolIndex != 0xFFFFFFFF)
             {
-                ref fwTxdDef def = ref Pool.Get(poolIndex);
+                ref fwTxdDef def = ref Pool[poolIndex];
                 return ref def.TexturesDictionary;
             }
 
