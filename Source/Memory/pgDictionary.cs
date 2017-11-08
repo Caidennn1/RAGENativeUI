@@ -12,7 +12,7 @@
         private ulong pad2;
         private ulong pad3;
         public CArray<uint> Keys;
-        public CPtrsArray<T> Values;
+        public CArray<Pointer<T>> Values;
         
         public int FindIndex(uint key)
         {
@@ -51,7 +51,7 @@
             int index = FindIndex(key);
             if (index != -1)
             {
-                return ref Values[(short)index];
+                return ref Values[(short)index].Ref;
             }
 
             throw new InvalidOperationException();

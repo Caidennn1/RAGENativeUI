@@ -103,7 +103,7 @@
                     LoadAndWait();
                 }
 
-                ref pgDictionary<grcTexture> dict = ref txdStore.Pool[dictIndex].TexturesDictionary;
+                ref pgDictionary<grcTexture> dict = ref txdStore.Pool[dictIndex].TexturesDictionary.Ref;
 
                 return dict.Values.Count;
             }
